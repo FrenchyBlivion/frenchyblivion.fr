@@ -165,48 +165,67 @@
   </div>
 
   <script>
-    particlesJS('particles-js', {
-      "particles": {
-        "number": {
-          "value": 100,
-          "density": {
-            "enable": true,
-            "value_area": 1000
-          }
-        },
-        "color": {
-          "value": "#ff6600"
-        },
-        "shape": {
-          "type": "circle"
-        },
-        "opacity": {
-          "value": 0.7,
-          "random": true
-        },
-        "size": {
-          "value": 3,
-          "random": true
-        },
-        "move": {
+  particlesJS('particles-js', {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ff4500"
+      },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.6,
+        "random": true,
+        "anim": {
+          "enable": true,
+          "speed": 1,
+          "opacity_min": 0,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 4,
+        "random": true,
+        "anim": {
           "enable": true,
           "speed": 3,
-          "direction": "bottom",
-          "random": true,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false
+          "size_min": 0.5,
+          "sync": false
         }
       },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": false },
-          "onclick": { "enable": false }
-        }
+      "line_linked": {
+        "enable": false
       },
-      "retina_detect": true
-    });
-  </script>
+      "move": {
+        "enable": true,
+        "speed": 2,
+        "direction": "bottom",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": false
+        },
+        "onclick": {
+          "enable": false
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
 </body>
 </html>
