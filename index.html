@@ -6,7 +6,6 @@
   <title>FrenchyBlivion - Mod FR pour Oblivion</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <style>
-    /* Intégration de la police personnalisée */
     @font-face {
       font-family: 'KingthingsPetrock';
       src: url('KingthingsPetrock.woff2') format('woff2');
@@ -14,11 +13,13 @@
       font-style: normal;
     }
 
-    /* Styles globaux */
+    html {
+      font-size: 32px; /* Taille de base pour les rem */
+    }
+
     body {
       margin: 0;
       font-family: 'KingthingsPetrock', sans-serif;
-      font-size: 256px;
       background: linear-gradient(to right, #1f1c2c, #928dab);
       color: #fff;
       display: flex;
@@ -31,12 +32,12 @@
     }
 
     h1 {
-      font-size: 4rem;
+      font-size: 4rem; /* 4 * 32px = 128px */
       margin-bottom: 0.5rem;
     }
 
     p {
-      font-size: 1.4rem;
+      font-size: 1.4rem; /* 1.4 * 32px = 44.8px */
       max-width: 600px;
     }
 
@@ -49,7 +50,7 @@
       border: none;
       border-radius: 8px;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.2rem; /* 1.2 * 32px = 38.4px */
       transition: background-color 0.3s;
     }
 
