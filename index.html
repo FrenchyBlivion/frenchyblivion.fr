@@ -32,12 +32,20 @@
       margin-bottom: 0.5rem;
     }
 
-   p:first-of-type {
+p:first-of-type {
+  max-width: 800px;
   text-align: left;
-  max-width: 750px;
-  margin: 0 auto 20px auto; /* centrer le bloc mais aligner texte à gauche */
+  margin: 0 auto 20px auto;
   hyphens: auto;
   word-break: normal;
+}
+
+p:nth-of-type(2) {
+  max-width: 700px;
+  text-align: justify;
+  hyphens: auto;
+  word-break: normal;
+  margin-bottom: 20px;
 }
     a.discord-button {
       display: inline-block;
