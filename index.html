@@ -42,7 +42,6 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Premier paragraphe : large, aligné à gauche mais centré */
     p:first-of-type {
       font-size: 34px;
       max-width: 800px;
@@ -52,7 +51,6 @@
       word-break: normal;
     }
 
-    /* Deuxième paragraphe : plus étroit, texte justifié */
     p:nth-of-type(2) {
       font-size: 34px;
       max-width: 700px;
@@ -62,24 +60,8 @@
       margin-bottom: 20px;
     }
 
-    a.discord-button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 30px;
-      background-color: #5865F2;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: background-color 0.3s;
-    }
-    a.discord-button:hover {
-      background-color: #4752c4;
-    }
-
     .social-links {
-      margin-top: 20px;
+      margin-top: 30px;
       display: flex;
       gap: 20px;
       justify-content: center;
@@ -88,18 +70,19 @@
     .social-icon {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       text-decoration: none;
       font-weight: bold;
       color: white;
-      padding: 12px 25px;
+      padding: 12px 30px;
       border-radius: 10px;
       font-size: 1.3rem;
       transition: background-color 0.3s;
+      white-space: nowrap;
     }
 
     .social-icon i {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       vertical-align: middle;
     }
 
@@ -137,9 +120,9 @@
   <h1>FrenchyBlivion</h1>
   <p>Le mod ultime pour jouer à <strong>Oblivion</strong> 100% en français 🇫🇷</p>
   <p>Plus de 8500 membres sur notre Discord ! Rejoins-nous pour télécharger le mod, discuter, ou signaler des bugs.</p>
-  <a class="discord-button" href="https://discord.gg/frenchyblivion" target="_blank" rel="noopener noreferrer">
-    🔗 Rejoindre le Discord
-  </a>
+
+  <!-- Suppression du gros bouton "Rejoindre Discord" -->
+
   <div class="social-links">
     <a href="https://discord.gg/frenchyblivion" target="_blank" rel="noopener noreferrer" class="social-icon discord">
       <i class="fab fa-discord"></i> Discord
@@ -148,7 +131,7 @@
       <i class="fab fa-youtube"></i> YouTube
     </a>
     <a href="https://x.com/FrenchyBlivion" target="_blank" rel="noopener noreferrer" class="social-icon x">
-      <i class="fab fa-x-twitter"></i> X
+      <i class="fab fa-x-twitter"></i> X / Twitter
     </a>
   </div>
 </body>
