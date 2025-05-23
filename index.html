@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<link rel="icon" type="image/png" href="favicon_frenchyblivion.png" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FrenchyBlivion - Mod FR pour Oblivion</title>
+  <link rel="icon" type="image/png" href="favicon_frenchyblivion.png" />
   <style>
     @font-face {
       font-family: 'KingthingsPetrock';
@@ -51,69 +51,36 @@
       margin-bottom: 20px;
     }
 
-    a.discord-button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 30px;
-      background-color: #5865F2;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: background-color 0.3s;
-    }
-    a.discord-button:hover {
-      background-color: #4752c4;
-    }
-
     .social-links {
-      margin-top: 20px;
+      margin-top: 40px;
       display: flex;
       gap: 20px;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     .social-icon {
       display: flex;
-      align-items: center; /* centre verticalement */
+      align-items: center;
       gap: 10px;
       text-decoration: none;
       font-weight: bold;
       color: white;
-      padding: 8px 16px; /* un peu plus compact */
+      padding: 10px 20px;
       border-radius: 8px;
       transition: background-color 0.3s;
-      font-size: 1.1rem; /* taille de texte homogène */
-      height: 40px; /* fixe la hauteur du bouton */
-      line-height: 1; /* pour éviter de décaler le texte */
+      font-size: 1.2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .social-icon:hover {
+      background-color: rgba(0, 0, 0, 0.7);
     }
 
     .social-icon img {
-      height: 24px; /* taille homogène pour les logos */
+      height: 24px;
       width: auto;
       display: block;
-    }
-
-    .social-icon.youtube {
-      background-color: #ff0000;
-    }
-    .social-icon.youtube:hover {
-      background-color: #cc0000;
-    }
-
-    .social-icon.twitter {
-      background-color: #000000; /* noir pour X */
-    }
-    .social-icon.twitter:hover {
-      background-color: #222222;
-    }
-
-    .social-icon.discord {
-      background-color: #5865F2;
-    }
-    .social-icon.discord:hover {
-      background-color: #4752c4;
     }
 
     img.logo {
@@ -128,15 +95,15 @@
   <h1>FrenchyBlivion</h1>
   <p>Le mod ultime pour jouer à <strong>Oblivion</strong> 100% en français 🇫🇷</p>
   <p>Plus de 8500 membres sur notre Discord ! Rejoins-nous pour télécharger le mod, discuter, ou signaler des bugs.</p>
-  <a class="discord-button" href="https://discord.gg/frenchyblivion" target="_blank" rel="noopener noreferrer">🔗 Rejoindre le Discord</a>
+
   <div class="social-links">
-    <a href="https://discord.gg/frenchyblivion" target="_blank" rel="noopener noreferrer" class="social-icon discord">
-      <img src="logo-discord.png" alt="Discord" /> Discord
+    <a href="https://discord.gg/frenchyblivion" target="_blank" rel="noopener noreferrer" class="social-icon">
+      <img src="DiscordLogo.png" alt="Discord" /> Discord
     </a>
-    <a href="https://www.youtube.com/@FrenchyBlivion" target="_blank" rel="noopener noreferrer" class="social-icon youtube">
-      <img src="logo-youtube.png" alt="YouTube" /> YouTube
+    <a href="https://www.youtube.com/@FrenchyBlivion" target="_blank" rel="noopener noreferrer" class="social-icon">
+      <img src="YoutubeLogo.png" alt="YouTube" /> YouTube
     </a>
-    <a href="https://x.com/FrenchyBlivion" target="_blank" rel="noopener noreferrer" class="social-icon twitter">
+    <a href="https://x.com/FrenchyBlivion" target="_blank" rel="noopener noreferrer" class="social-icon">
       <img src="Xlogo.png" alt="X" /> X / Twitter
     </a>
   </div>
