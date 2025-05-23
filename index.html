@@ -38,24 +38,19 @@
       text-shadow: 2px 2px 6px #000;
     }
 
-    p:first-of-type {
+    p,
+    .genese {
       font-size: 34px;
-      max-width: 800px;
-      text-align: left;
+      max-width: 1000px;
       margin: 0 auto 20px auto;
       hyphens: auto;
       word-break: normal;
       text-shadow: 2px 2px 6px #000;
     }
 
-    p:nth-of-type(2) {
-      font-size: 34px;
-      max-width: 700px;
+    p:nth-of-type(2),
+    .genese {
       text-align: justify;
-      hyphens: auto;
-      word-break: normal;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 6px #000;
     }
 
     .social-links {
@@ -124,17 +119,26 @@
       position: relative;
     }
 
-    /* Correct placement of particles-js styling */
     #particles-js {
       position: fixed;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      z-index: -1; /* Derrière tout */
-      pointer-events: none; /* Ne gêne pas les clics */
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    h2.section-title {
+      font-size: 48px;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 6px #000;
+      color: #fff;
     }
   </style>
 </head>
+
 <body>
   <div id="particles-js"></div>
 
@@ -163,92 +167,78 @@
       <img src="Xlogo.png" alt="X" /> X / Twitter
     </a>
   </div>
-<h2 style="
-  font-size: 48px;
-  margin-top: 60px;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 6px #000;
-  color: #fff;">
-  Genèse du projet
-</h2>
 
-<p style="
-  font-size: 30px;
-  max-width: 800px;
-  text-align: justify;
-  hyphens: auto;
-  word-break: normal;
-  margin-bottom: 60px;
-  text-shadow: 2px 2px 6px #000;">
-  Le 24 avril, à peine une demi-journée après la sortie d’<strong>Oblivion Remastered</strong>, la communauté française a rapidement déchanté en découvrant que la version française du jeu original de 2006 n’était plus présente. Peu importe les raisons de cette absence du côté de Bethesda, nous <strong>FrenchyBlivion</strong>, une équipe formée à l'origine via un post sur jeuxvideo.com et désormais réunie sur Discord, avons décidé de prendre les choses en main.
-  <br><br>
-  Notre objectif : <strong>réintégrer les voix mythiques du RPG occidental</strong>, ainsi que doubler les PNJ qui n’avaient jamais eu de voix à l’époque. Nous nous attelons aussi à la localisation des panneaux, à la réintégration des sous-titres d’origine, et à une traduction cohérente de l’ensemble du contenu.
-  <br><br>
-  Avec ce projet, nous espérons proposer <strong>le mod de localisation français le plus complet, fidèle et abouti possible</strong>.
-</p>
+  <h2 class="section-title">Genèse du projet</h2>
+  <p class="genese">
+    Le 24 avril, à peine une demi-journée après la sortie d’<strong>Oblivion Remastered</strong>, la communauté française a rapidement déchanté en découvrant que la version française du jeu original de 2006 n’était plus présente. Peu importe les raisons de cette absence du côté de Bethesda, nous <strong>FrenchyBlivion</strong>, une équipe formée à l'origine via un post sur jeuxvideo.com et désormais réunie sur Discord, avons décidé de prendre les choses en main.
+    <br><br>
+    Notre objectif : <strong>réintégrer les voix mythiques du RPG occidental</strong>, ainsi que doubler les PNJ qui n’avaient jamais eu de voix à l’époque. Nous nous attelons aussi à la localisation des panneaux, à la réintégration des sous-titres d’origine, et à une traduction cohérente de l’ensemble du contenu.
+    <br><br>
+    Avec ce projet, nous espérons proposer <strong>le mod de localisation français le plus complet, fidèle et abouti possible</strong>.
+  </p>
 
   <script>
-  particlesJS('particles-js', {
-    "particles": {
-      "number": {
-        "value": 80,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#ff4500"
-      },
-      "shape": {
-        "type": "circle"
-      },
-      "opacity": {
-        "value": 0.6,
-        "random": true,
-        "anim": {
-          "enable": true,
-          "speed": 1,
-          "opacity_min": 0,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 4,
-        "random": true,
-        "anim": {
-          "enable": true,
-          "speed": 3,
-          "size_min": 0.5,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": false
-      },
-      "move": {
-        "enable": true,
-        "speed": 2,
-        "direction": "bottom",
-        "random": true,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ff4500"
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.6,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 1,
+            "opacity_min": 0,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 4,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 3,
+            "size_min": 0.5,
+            "sync": false
+          }
+        },
+        "line_linked": {
           "enable": false
         },
-        "onclick": {
-          "enable": false
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "bottom",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false
         }
-      }
-    },
-    "retina_detect": true
-  });
-</script>
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": false
+          },
+          "onclick": {
+            "enable": false
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
