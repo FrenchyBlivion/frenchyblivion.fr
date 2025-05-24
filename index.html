@@ -24,18 +24,64 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      text-align: center;
       min-height: 100vh;
       padding: 20px;
       position: relative;
       overflow-x: hidden;
     }
 
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .content-wrapper {
+      background-color: rgba(0, 0, 0, 0.65);
+      padding: 40px 30px;
+      border-radius: 16px;
+      max-width: 1000px;
+      width: 95%;
+      margin: 40px auto;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
+      z-index: 1;
+      position: relative;
+      text-align: center;
+    }
+
+    img.logo {
+      max-width: 390px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 960px;
+      height: 540px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      border: none;
+    }
+
     h1 {
       font-size: 96px;
       margin-bottom: 0.5rem;
       text-shadow: 2px 2px 6px #000;
+    }
+
+    h2.section-title {
+      font-size: 48px;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 6px #000;
+      color: #fff;
     }
 
     p,
@@ -46,21 +92,7 @@
       hyphens: auto;
       word-break: normal;
       text-shadow: 2px 2px 6px #000;
-    }
-
-    p:nth-of-type(2),
-    .genese {
       text-align: justify;
-    }
-
-    .text-block {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 12px;
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      margin-bottom: 20px;
     }
 
     .social-links {
@@ -113,79 +145,47 @@
     .social-icon.twitter:hover {
       background-color: #222222;
     }
-
-    img.logo {
-      max-width: 390px;
-      height: auto;
-      margin-bottom: 20px;
-      z-index: 10;
-      position: relative;
-    }
-
-    iframe {
-      margin-bottom: 20px;
-      border-radius: 12px;
-      z-index: 10;
-      position: relative;
-    }
-
-    #particles-js {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    h2.section-title {
-      font-size: 48px;
-      margin-top: 60px;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 6px #000;
-      color: #fff;
-    }
   </style>
 </head>
 
 <body>
   <div id="particles-js"></div>
 
-  <img src="icon_frenchyblivion.png" alt="Logo FrenchyBlivion" class="logo" />
+  <div class="content-wrapper">
+    <img src="icon_frenchyblivion.png" alt="Logo FrenchyBlivion" class="logo" />
 
-  <iframe width="960" height="540"
-    src="https://www.youtube.com/embed/Btgs-Iy0yTo"
-    title="Présentation FrenchyBlivion"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+    <iframe
+      src="https://www.youtube.com/embed/Btgs-Iy0yTo"
+      title="Présentation FrenchyBlivion"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
 
-  <h1 class="text-block">FrenchyBlivion</h1>
-  <p class="text-block">Le mod ultime pour jouer à Oblivion 100% en Français.</p>
-  <p class="text-block">Plus de 8500 membres sur notre Discord ! Rejoins-nous pour télécharger le mod, discuter, ou signaler des bugs.</p>
+    <h1>FrenchyBlivion</h1>
+    <p>Le mod ultime pour jouer à Oblivion 100% en Français.</p>
+    <p>Plus de 8500 membres sur notre Discord ! Rejoins-nous pour télécharger le mod, discuter, ou signaler des bugs.</p>
 
-  <div class="social-links">
-    <a href="https://discord.gg/frenchyblivion" target="_blank" rel="noopener noreferrer" class="social-icon discord">
-      <img src="DiscordLogo.png" alt="Discord" /> Discord
-    </a>
-    <a href="https://www.youtube.com/@FrenchyBlivion" target="_blank" rel="noopener noreferrer" class="social-icon youtube">
-      <img src="YoutubeLogo.png" alt="YouTube" /> YouTube
-    </a>
-    <a href="https://x.com/FrenchyBlivion" target="_blank" rel="noopener noreferrer" class="social-icon twitter">
-      <img src="Xlogo.png" alt="X" /> X / Twitter
-    </a>
+    <div class="social-links">
+      <a href="https://discord.gg/frenchyblivion" target="_blank" rel="noopener noreferrer" class="social-icon discord">
+        <img src="DiscordLogo.png" alt="Discord" /> Discord
+      </a>
+      <a href="https://www.youtube.com/@FrenchyBlivion" target="_blank" rel="noopener noreferrer" class="social-icon youtube">
+        <img src="YoutubeLogo.png" alt="YouTube" /> YouTube
+      </a>
+      <a href="https://x.com/FrenchyBlivion" target="_blank" rel="noopener noreferrer" class="social-icon twitter">
+        <img src="Xlogo.png" alt="X" /> X / Twitter
+      </a>
+    </div>
+
+    <h2 class="section-title">Genèse du projet</h2>
+    <p class="genese">
+      Le 24 avril, à peine une demi-journée après la sortie d’Oblivion Remastered, la communauté française a rapidement déchanté en découvrant que la version française du jeu original de 2006 n’était plus présente. Peu importe les raisons de cette absence du côté de Bethesda, nous FrenchyBlivion, une équipe formée à l'origine via un post sur jeuxvideo.com et désormais réunie sur Discord, avons décidé de prendre les choses en main.
+      <br><br>
+      Notre objectif : réintégrer les voix mythiques du RPG occidental, ainsi que doubler les PNJ qui n’avaient jamais eu de voix à l’époque. Nous nous attelons aussi à la localisation des panneaux, à la réintégration des sous-titres d’origine, et à une traduction cohérente de l’ensemble du contenu.
+      <br><br>
+      Avec ce projet, nous espérons proposer le mod de localisation français le plus complet, fidèle et abouti possible.
+    </p>
   </div>
-
-  <h2 class="section-title">Genèse du projet</h2>
-  <p class="genese text-block">
-    Le 24 avril, à peine une demi-journée après la sortie d’Oblivion Remastered, la communauté française a rapidement déchanté en découvrant que la version française du jeu original de 2006 n’était plus présente. Peu importe les raisons de cette absence du côté de Bethesda, nous FrenchyBlivion, une équipe formée à l'origine via un post sur jeuxvideo.com et désormais réunie sur Discord, avons décidé de prendre les choses en main.
-    <br><br>
-    Notre objectif : réintégrer les voix mythiques du RPG occidental, ainsi que doubler les PNJ qui n’avaient jamais eu de voix à l’époque. Nous nous attelons aussi à la localisation des panneaux, à la réintégration des sous-titres d’origine, et à une traduction cohérente de l’ensemble du contenu.
-    <br><br>
-    Avec ce projet, nous espérons proposer le mod de localisation français le plus complet, fidèle et abouti possible.
-  </p>
 
   <script>
     particlesJS('particles-js', {
