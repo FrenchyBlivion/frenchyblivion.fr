@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FrenchyBlivion - Mod FR pour Oblivion</title>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <link rel="icon" type="image/png" href="favicon_frenchyblivion.png" />
+  <link rel="icon" href="favicon_frenchyblivion.png" type="image/png" />
 
   <style>
     @font-face {
@@ -15,70 +15,72 @@
       font-style: normal;
     }
 
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
       font-family: 'KingthingsPetrock', sans-serif;
-      background: black;
+      background: #000;
       color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      position: relative;
       overflow-x: hidden;
     }
 
+    /* Vidéo de fond */
     #bg-video {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      z-index: -2;
+      z-index: -3;
       pointer-events: none;
     }
 
+    /* Calque sombre par-dessus la vidéo */
     .video-overlay {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       background: rgba(0, 0, 0, 0.45);
-      z-index: -1;
+      z-index: -2;
       pointer-events: none;
     }
 
+    /* Particules */
     #particles-js {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 1; /* <- Particules visibles sous le contenu */
+      z-index: -1;
       pointer-events: none;
     }
 
     .content-wrapper {
-      background-color: rgba(0, 0, 0, 0.65);
-      padding: 40px 30px;
-      border-radius: 16px;
+      position: relative;
+      z-index: 1;
       max-width: 1000px;
       width: 95%;
       margin: 40px auto;
+      padding: 40px 30px;
+      background-color: rgba(0, 0, 0, 0.65);
+      border-radius: 16px;
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
       box-shadow: 0 0 25px rgba(0,0,0,0.5);
-      z-index: 2; /* <- Contenu au-dessus de tout */
-      position: relative;
       text-align: center;
     }
 
     img.logo {
       max-width: 390px;
-      height: auto;
       margin-bottom: 20px;
     }
 
@@ -102,27 +104,22 @@
       margin-top: 60px;
       margin-bottom: 30px;
       text-shadow: 2px 2px 6px #000;
-      color: #fff;
     }
 
-    p,
-    .genese {
+    p, .genese {
       font-size: 34px;
-      max-width: 1000px;
-      margin: 0 auto 28px auto;
-      line-height: 1.6;
-      hyphens: auto;
-      word-break: normal;
-      text-shadow: 2px 2px 6px #000;
+      line-height: 1.65;
+      margin-bottom: 28px;
       text-align: justify;
+      text-shadow: 2px 2px 6px #000;
     }
 
     .social-links {
       margin-top: 40px;
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
-      flex-wrap: wrap;
     }
 
     .social-icon {
@@ -134,39 +131,23 @@
       color: white;
       padding: 14px 28px;
       border-radius: 10px;
-      transition: background-color 0.3s;
       font-size: 1.56rem;
+      transition: background-color 0.3s;
     }
 
     .social-icon img {
       height: 36px;
       width: auto;
-      display: block;
     }
 
-    .social-icon.discord {
-      background-color: #5865F2;
-    }
+    .discord { background-color: #5865F2; }
+    .discord:hover { background-color: #4752c4; }
 
-    .social-icon.discord:hover {
-      background-color: #4752c4;
-    }
+    .youtube { background-color: #FF0000; }
+    .youtube:hover { background-color: #cc0000; }
 
-    .social-icon.youtube {
-      background-color: #FF0000;
-    }
-
-    .social-icon.youtube:hover {
-      background-color: #cc0000;
-    }
-
-    .social-icon.twitter {
-      background-color: #000000;
-    }
-
-    .social-icon.twitter:hover {
-      background-color: #222222;
-    }
+    .twitter { background-color: #000; }
+    .twitter:hover { background-color: #222; }
   </style>
 </head>
 
@@ -187,8 +168,7 @@
   <div class="content-wrapper">
     <img src="icon_frenchyblivion.png" alt="Logo FrenchyBlivion" class="logo" />
 
-    <iframe
-      src="https://www.youtube.com/embed/Btgs-Iy0yTo"
+    <iframe src="https://www.youtube.com/embed/Btgs-Iy0yTo"
       title="Présentation FrenchyBlivion"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
@@ -199,20 +179,22 @@
     <p>Plus de 8500 membres sur notre Discord ! Rejoins-nous pour télécharger le mod, discuter, ou signaler des bugs.</p>
 
     <div class="social-links">
-      <a href="https://discord.gg/frenchyblivion" target="_blank" rel="noopener noreferrer" class="social-icon discord">
-        <img src="DiscordLogo.png" alt="Discord" /> Discord
+      <a href="https://discord.gg/frenchyblivion" class="social-icon discord" target="_blank">
+        <img src="DiscordLogo.png" alt="Discord"> Discord
       </a>
-      <a href="https://www.youtube.com/@FrenchyBlivion" target="_blank" rel="noopener noreferrer" class="social-icon youtube">
-        <img src="YoutubeLogo.png" alt="YouTube" /> YouTube
+      <a href="https://www.youtube.com/@FrenchyBlivion" class="social-icon youtube" target="_blank">
+        <img src="YoutubeLogo.png" alt="YouTube"> YouTube
       </a>
-      <a href="https://x.com/FrenchyBlivion" target="_blank" rel="noopener noreferrer" class="social-icon twitter">
-        <img src="Xlogo.png" alt="X" /> X / Twitter
+      <a href="https://x.com/FrenchyBlivion" class="social-icon twitter" target="_blank">
+        <img src="Xlogo.png" alt="Twitter"> X / Twitter
       </a>
     </div>
 
     <h2 class="section-title">Genèse du projet</h2>
     <p class="genese">
-      Le 24 avril, à peine une demi-journée après la sortie d’Oblivion Remastered, la communauté française a rapidement déchanté en découvrant que la version française du jeu original de 2006 n’était plus présente. Peu importe les raisons de cette absence du côté de Bethesda, nous FrenchyBlivion, une équipe formée à l'origine via un post sur jeuxvideo.com et désormais réunie sur Discord, avons décidé de prendre les choses en main.
+      Le 24 avril, à peine une demi-journée après la sortie d’Oblivion Remastered, la communauté française a rapidement déchanté en découvrant que la version française du jeu original de 2006 n’était plus présente.
+      <br><br>
+      Peu importe les raisons de cette absence du côté de Bethesda, nous FrenchyBlivion, une équipe formée à l'origine via un post sur jeuxvideo.com et désormais réunie sur Discord, avons décidé de prendre les choses en main.
       <br><br>
       Notre objectif : réintégrer les voix mythiques du RPG occidental, ainsi que doubler les PNJ qui n’avaient jamais eu de voix à l’époque. Nous nous attelons aussi à la localisation des panneaux, à la réintégration des sous-titres d’origine, et à une traduction cohérente de l’ensemble du contenu.
       <br><br>
@@ -220,52 +202,44 @@
     </p>
   </div>
 
-  <!-- Configuration Particles.js -->
+  <!-- Script Particules -->
   <script>
     particlesJS('particles-js', {
-      "particles": {
-        "number": {
-          "value": 80,
-          "density": {
-            "enable": true,
-            "value_area": 800
-          }
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#ff4500" },
+        shape: { type: "circle" },
+        opacity: {
+          value: 0.6,
+          random: true,
+          anim: { enable: true, speed: 1, opacity_min: 0, sync: false }
         },
-        "color": {
-          "value": "#ff4500"
+        size: {
+          value: 4,
+          random: true,
+          anim: { enable: true, speed: 3, size_min: 0.5, sync: false }
         },
-        "shape": {
-          "type": "circle"
-        },
-        "opacity": {
-          "value": 0.6,
-          "random": true,
-          "anim": {
-            "enable": true,
-            "speed": 1,
-            "opacity_min": 0,
-            "sync": false
-          }
-        },
-        "size": {
-          "value": 4,
-          "random": true,
-          "anim": {
-            "enable": true,
-            "speed": 3,
-            "size_min": 0.5,
-            "sync": false
-          }
-        },
-        "line_linked": {
-          "enable": false
-        },
-        "move": {
-          "enable": true,
-          "speed": 2,
-          "direction": "bottom",
-          "random": true,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false
+        line_linked: { enable: false },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "bottom",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false
         }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: false },
+          onclick: { enable: false },
+          resize: true
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>
