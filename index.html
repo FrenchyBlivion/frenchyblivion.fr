@@ -57,7 +57,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 0;
+      z-index: 1; /* <- Particules visibles sous le contenu */
       pointer-events: none;
     }
 
@@ -71,7 +71,7 @@
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
       box-shadow: 0 0 25px rgba(0,0,0,0.5);
-      z-index: 1;
+      z-index: 2; /* <- Contenu au-dessus de tout */
       position: relative;
       text-align: center;
     }
@@ -177,7 +177,7 @@
     Votre navigateur ne supporte pas la lecture vidéo.
   </video>
 
-  <!-- Calque sombre au-dessus de la vidéo -->
+  <!-- Calque sombre -->
   <div class="video-overlay"></div>
 
   <!-- Particules -->
@@ -220,7 +220,7 @@
     </p>
   </div>
 
-  <!-- Particles.js config -->
+  <!-- Configuration Particles.js -->
   <script>
     particlesJS('particles-js', {
       "particles": {
@@ -265,4 +265,7 @@
           "speed": 2,
           "direction": "bottom",
           "random": true,
-         
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false
+        }
