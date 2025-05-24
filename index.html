@@ -53,6 +53,16 @@
       text-align: justify;
     }
 
+    .text-block {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      margin-bottom: 20px;
+    }
+
     .social-links {
       margin-top: 40px;
       display: flex;
@@ -105,7 +115,7 @@
     }
 
     img.logo {
-      max-width: 390px; /* agrandi de 30% par rapport à 300px */
+      max-width: 390px;
       height: auto;
       margin-bottom: 20px;
       z-index: 10;
@@ -136,7 +146,6 @@
       text-shadow: 2px 2px 6px #000;
       color: #fff;
     }
-
   </style>
 </head>
 
@@ -153,9 +162,9 @@
     allowfullscreen>
   </iframe>
 
-  <h1>FrenchyBlivion</h1>
-  <p>Le mod ultime pour jouer à Oblivion 100% en Français.</p>
-  <p>Plus de 8500 membres sur notre Discord ! Rejoins-nous pour télécharger le mod, discuter, ou signaler des bugs.</p>
+  <h1 class="text-block">FrenchyBlivion</h1>
+  <p class="text-block">Le mod ultime pour jouer à Oblivion 100% en Français.</p>
+  <p class="text-block">Plus de 8500 membres sur notre Discord ! Rejoins-nous pour télécharger le mod, discuter, ou signaler des bugs.</p>
 
   <div class="social-links">
     <a href="https://discord.gg/frenchyblivion" target="_blank" rel="noopener noreferrer" class="social-icon discord">
@@ -170,7 +179,7 @@
   </div>
 
   <h2 class="section-title">Genèse du projet</h2>
-  <p class="genese">
+  <p class="genese text-block">
     Le 24 avril, à peine une demi-journée après la sortie d’Oblivion Remastered, la communauté française a rapidement déchanté en découvrant que la version française du jeu original de 2006 n’était plus présente. Peu importe les raisons de cette absence du côté de Bethesda, nous FrenchyBlivion, une équipe formée à l'origine via un post sur jeuxvideo.com et désormais réunie sur Discord, avons décidé de prendre les choses en main.
     <br><br>
     Notre objectif : réintégrer les voix mythiques du RPG occidental, ainsi que doubler les PNJ qui n’avaient jamais eu de voix à l’époque. Nous nous attelons aussi à la localisation des panneaux, à la réintégration des sous-titres d’origine, et à une traduction cohérente de l’ensemble du contenu.
