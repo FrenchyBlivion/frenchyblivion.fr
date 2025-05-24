@@ -6,6 +6,7 @@
   <title>FrenchyBlivion - Mod FR pour Oblivion</title>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <link rel="icon" type="image/png" href="favicon_frenchyblivion.png" />
+
   <style>
     @font-face {
       font-family: 'KingthingsPetrock';
@@ -28,6 +29,7 @@
       overflow-x: hidden;
     }
 
+    /* Vidéo de fond */
     #bg-video {
       position: fixed;
       top: 0;
@@ -39,6 +41,7 @@
       pointer-events: none;
     }
 
+    /* Calque sombre */
     .video-overlay {
       position: fixed;
       top: 0;
@@ -50,6 +53,7 @@
       pointer-events: none;
     }
 
+    /* Particules */
     #particles-js {
       position: fixed;
       top: 0;
@@ -170,13 +174,16 @@
 </head>
 
 <body>
+  <!-- Vidéo de fond -->
   <video autoplay muted loop playsinline id="bg-video">
     <source src="Video-fond.mp4" type="video/mp4">
     Votre navigateur ne supporte pas la lecture vidéo.
   </video>
 
+  <!-- Calque sombre -->
   <div class="video-overlay"></div>
 
+  <!-- Particules -->
   <div id="particles-js"></div>
 
   <div class="content-wrapper">
@@ -207,6 +214,77 @@
 
     <h2 class="section-title">Genèse du projet</h2>
     <p class="genese">
-      Le 24 avril, à peine une demi-journée
-::contentReference[oaicite:0]{index=0}
- 
+      Le 24 avril, à peine une demi-journée après la sortie d’Oblivion Remastered, la communauté française a rapidement déchanté en découvrant que la version française du jeu original de 2006 n’était plus présente. Peu importe les raisons de cette absence du côté de Bethesda, nous FrenchyBlivion, une équipe formée à l'origine via un post sur jeuxvideo.com et désormais réunie sur Discord, avons décidé de prendre les choses en main.
+      <br><br>
+      Notre objectif : réintégrer les voix mythiques du RPG occidental, ainsi que doubler les PNJ qui n’avaient jamais eu de voix à l’époque. Nous nous attelons aussi à la localisation des panneaux, à la réintégration des sous-titres d’origine, et à une traduction cohérente de l’ensemble du contenu.
+      <br><br>
+      Avec ce projet, nous espérons proposer le mod de localisation français le plus complet, fidèle et abouti possible.
+    </p>
+  </div>
+
+  <!-- Particles config -->
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ff4500"
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.6,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 1,
+            "opacity_min": 0,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 4,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 3,
+            "size_min": 0.5,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": false
+        },
+        "move": {
+          "enable": true
+"speed": 2,
+          "direction": "bottom",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": false
+          },
+          "onclick": {
+            "enable": false
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
