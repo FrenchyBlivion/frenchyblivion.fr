@@ -18,7 +18,6 @@
     body {
       margin: 0;
       font-family: 'KingthingsPetrock', sans-serif;
-      background: black;
       color: #fff;
       display: flex;
       flex-direction: column;
@@ -29,31 +28,16 @@
       overflow-x: hidden;
     }
 
-    /* Vidéo de fond */
     #bg-video {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       z-index: -2;
-      pointer-events: none;
     }
 
-    /* Calque sombre */
-    .video-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.45);
-      z-index: -2;
-      pointer-events: none;
-    }
-
-    /* Particules */
     #particles-js {
       position: fixed;
       top: 0;
@@ -174,16 +158,10 @@
 </head>
 
 <body>
-  <!-- Vidéo de fond -->
   <video autoplay muted loop playsinline id="bg-video">
     <source src="Video-fond.mp4" type="video/mp4">
-    Votre navigateur ne supporte pas la lecture vidéo.
   </video>
 
-  <!-- Calque sombre -->
-  <div class="video-overlay"></div>
-
-  <!-- Particules -->
   <div id="particles-js"></div>
 
   <div class="content-wrapper">
@@ -222,7 +200,6 @@
     </p>
   </div>
 
-  <!-- Particles config -->
   <script>
     particlesJS('particles-js', {
       "particles": {
@@ -263,8 +240,8 @@
           "enable": false
         },
         "move": {
-          "enable": true
-"speed": 2,
+          "enable": true,
+          "speed": 2,
           "direction": "bottom",
           "random": true,
           "straight": false,
